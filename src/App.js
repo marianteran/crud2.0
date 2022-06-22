@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ListaUsuarios from './components/usuario/ListaUsuarios';
+import AgregarUsuario from './components/usuario/AgregarUsuario';
+import EditarUsuario from './components/usuario/EditarUsuario';
+import Nav from './components/navegation/Navegation';
+import Pruebaform from './components/usuario/Pruebaform';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <BrowserRouter>
+
+     <div className='container-home'> 
+    <Nav/>
+
+      <Routes>
+        <Route path='/' element={<ListaUsuarios/>} />
+        <Route path='/adduser' element={<AgregarUsuario/>} />
+        <Route path='/editarusuario/:idusuario' element={<EditarUsuario/>} />
+        <Route path='/prueba' element={<Pruebaform/>} />
+
+      </Routes>
+      </div>
+    </BrowserRouter>
+
+    
     </div>
   );
 }

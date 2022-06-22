@@ -36,3 +36,47 @@
     transform: rotate(360deg);
   }
 }
+
+.container-home{
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  
+}
+
+.box-user-indiv{
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+}
+
+.card-user{
+  background-color: pink;
+  padding: 20px;
+  min-width: 300px;
+  margin: 10px;
+  border-radius: 0.5rem;
+}
+
+.container-list-user{
+  background-color: black;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.prueba{
+  background-color: black;
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container-navig{
+  width: 250px;
+}
